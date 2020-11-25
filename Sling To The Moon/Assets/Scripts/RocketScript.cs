@@ -6,6 +6,8 @@ public class RocketScript : MonoBehaviour
 {
     public Rigidbody rb;
     public GameObject cam;
+    public GameObject particles;
+    public GameObject hitparticles;
 
     public GameObject moon;
 
@@ -15,6 +17,8 @@ public class RocketScript : MonoBehaviour
 
     void Start()
     {
+        particles.SetActive(false);
+        hitparticles.SetActive(false);
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
     }
@@ -45,6 +49,7 @@ public class RocketScript : MonoBehaviour
         rb.AddForce(transform.forward * 100000);
         transform.parent = null;
         launched = true;
+        particles.SetActive(true);
     }
 
 
@@ -60,5 +65,12 @@ public class RocketScript : MonoBehaviour
         }
 
 
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        particles.SetActive(false);
+        hitparticles.SetActive(true);
     }
 }
