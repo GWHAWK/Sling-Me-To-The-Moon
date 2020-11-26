@@ -31,6 +31,16 @@ public class RocketScript : MonoBehaviour
             sling();
         }
 
+        if (Input.GetKeyDown(KeyCode.JoystickButton5))
+        {
+            slingRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.JoystickButton4))
+        {
+            slingLeft();
+        }
+
         // Smoothly tilts a transform towards a target rotation.
         float tiltAroundZ = Input.GetAxis("rHorizontal") * tiltAngle * -1;
         float tiltAroundX = Input.GetAxis("rVertical") * tiltAngle * -1;
@@ -72,5 +82,17 @@ public class RocketScript : MonoBehaviour
     {
         particles.SetActive(false);
         hitparticles.SetActive(true);
+    }
+
+
+    private void slingRight()
+    {
+        rb.AddForce(transform.right * 100000);
+    }
+
+
+    private void slingLeft()
+    {
+        rb.AddForce(transform.right * -100000);
     }
 }
