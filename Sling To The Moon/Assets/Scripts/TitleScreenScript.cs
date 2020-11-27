@@ -15,7 +15,7 @@ public class TitleScreenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit"))
         {
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }

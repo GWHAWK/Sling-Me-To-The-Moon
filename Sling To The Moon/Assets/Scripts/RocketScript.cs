@@ -40,12 +40,12 @@ public class RocketScript : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit"))
         {
             sling();
         }
 
-        if (Input.GetButtonDown("Jump") && finished)
+        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit")) && finished)
         {
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }
@@ -61,8 +61,8 @@ public class RocketScript : MonoBehaviour
         }
 
         // Smoothly tilts a transform towards a target rotation.
-        float tiltAroundZ = Input.GetAxis("rHorizontal") * tiltAngle * -1;
-        float tiltAroundX = Input.GetAxis("rVertical") * tiltAngle * -1;
+        float tiltAroundZ = Input.GetAxis("rHorizontal") * tiltAngle * -1 * Input.GetAxis("Mouse X");
+        float tiltAroundX = Input.GetAxis("rVertical") * tiltAngle * -1 * Input.GetAxis("Mouse Y");
         if (launched == true)
         {
             cam.transform.RotateAround(transform.position, Vector3.up, tiltAroundZ * 3f * Time.deltaTime);
