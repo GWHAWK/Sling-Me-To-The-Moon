@@ -41,12 +41,12 @@ public class RocketScript : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
-        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Jump"))
         {
             sling();
         }
 
-        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit")) && finished)
+        if (Input.GetButtonDown("Jump") && finished)
         {
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }

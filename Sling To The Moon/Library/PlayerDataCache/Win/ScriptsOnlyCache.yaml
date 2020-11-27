@@ -647,5 +647,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Title Screen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/gavin/Documents/GitHub/Sling-Me-To-The-Moon/Sling To The Moon/Sling
-    Me To The Moon/Sling To The Moon.exe
+  playerPath: C:/Users/gavin/Desktop/Sling Me To The Moon/Sling To The Moon.exe
