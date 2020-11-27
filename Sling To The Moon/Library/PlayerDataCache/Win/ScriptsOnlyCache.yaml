@@ -30,6 +30,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -62,6 +63,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11174}
+    - Class: 114
+      Script: {instanceID: 11372}
     - Class: 114
       Script: {instanceID: 11412}
     - Class: 114
@@ -97,6 +100,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -138,6 +143,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11174}
     - Class: 114
+      Script: {instanceID: 11372}
+    - Class: 114
       Script: {instanceID: 11760}
     - Class: 114
       Script: {instanceID: 11786}
@@ -164,6 +171,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -348,7 +357,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 42ad5f887cf302289c3e93bd95eb529d
+      Hash: d5d919350fb86082fb7761ab5bea3992
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RocketScript
