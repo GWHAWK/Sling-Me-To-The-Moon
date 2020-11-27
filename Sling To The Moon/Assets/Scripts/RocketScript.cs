@@ -11,6 +11,7 @@ public class RocketScript : MonoBehaviour
     public Transform yPivot;
     public GameObject particles;
     public GameObject hitparticles;
+    public GameObject Backgorund;
 
     public GameObject moon;
 
@@ -89,6 +90,7 @@ public class RocketScript : MonoBehaviour
         if (other.CompareTag("Border"))
         {
             lostText.gameObject.SetActive(true);
+            Backgorund.SetActive(true);
             finished = true;
             launched = false;
             rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
@@ -100,6 +102,7 @@ public class RocketScript : MonoBehaviour
         if (other.CompareTag("Moon"))
         {
             finishedText.gameObject.SetActive(true);
+            Backgorund.SetActive(true);
             finished = true;
             launched = false;
             rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
